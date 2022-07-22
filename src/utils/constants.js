@@ -11,3 +11,4 @@ export const CHECK_ROOM_LINK_TEXT = 'Check Room'
 
 // Button constants
 export const ADD_BUTTON_TEXT = 'Add'
+export const CHECK_BUTTON_TEXT = 'Check'
