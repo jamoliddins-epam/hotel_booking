@@ -31,3 +31,10 @@ form {
   align-items: flex-start;
   justify-content: center;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

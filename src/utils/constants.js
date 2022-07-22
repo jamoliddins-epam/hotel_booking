@@ -13,10 +13,10 @@ export const CHECK_ROOM_LINK_TEXT = 'Check Room'
 export const ADD_BUTTON_TEXT = 'Add'
 export const CHECK_BUTTON_TEXT = 'Check'
 
-// Error message constants
+// Alert message constants
 export const SURNAME_ERROR_TEXT = 'Please provide a valid surname'
 export const ROOM_ERROR_TEXT = 'Please select a room'
 export const DATE_ERROR_TEXT = 'Please select a date'
-
-// Success message constants
 export const ADD_BOOKING_SUCCESS_TEXT = 'Room has been booked!'
+export const ROOM_AVAILABLE_TEXT = 'Room is available'
+export const ROOM_NOT_AVAILABLE_TEXT = 'Room is not available'
