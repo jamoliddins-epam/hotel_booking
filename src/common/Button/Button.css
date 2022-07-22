@@ -1,0 +1,19 @@
+.btn {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-size: 1rem;
+  width: 80%;
+  align-self: end;
+  margin: 1rem 0;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #41b1e9;
+  border-color: #fff;
+  color: #fff;
+}

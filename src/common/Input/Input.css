@@ -1,0 +1,22 @@
+.form-element-container {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-element-container label {
+  font-size: 1.1rem;
+  width: 25%;
+}
+
+.form-element-container input,
+.form-element-container select {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
