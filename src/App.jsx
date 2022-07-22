@@ -12,7 +12,7 @@ import AddBooking from './pages/AddBooking/AddBooking'
 import CheckBooking from './pages/CheckBooking/CheckBooking'
 
 // constants
-import { MAIN_HEADER_TITLE_TEXT } from './constants'
+import { MAIN_HEADER_TITLE_TEXT } from './utils/constants'
 
 function App() {
   return (

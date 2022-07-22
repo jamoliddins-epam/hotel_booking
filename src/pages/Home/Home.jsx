@@ -1,7 +1,7 @@
 import React from 'react'
 
 // constants
-import { HOME_TITLE_TEXT } from '../../constants'
+import { HOME_TITLE_TEXT } from '../../utils/constants'
 
 const Home = () => {
   return (

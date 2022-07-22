@@ -1,7 +1,7 @@
 import React from 'react'
 
 // constants
-import { CHECK_ROOM_TITLE_TEXT } from '../../constants'
+import { CHECK_ROOM_TITLE_TEXT } from '../../utils/constants'
 
 const CheckBooking = () => {
   return (

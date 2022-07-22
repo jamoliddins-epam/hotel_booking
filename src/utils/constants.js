@@ -8,3 +8,6 @@ export const ADD_BOOKING_TITLE_TEXT = 'Add Booking'
 export const HOME_LINK_TEXT = 'Home'
 export const ADD_BOOKING_LINK_TEXT = 'Add Booking'
 export const CHECK_ROOM_LINK_TEXT = 'Check Room'
+
+// Button constants
+export const ADD_BUTTON_TEXT = 'Add'

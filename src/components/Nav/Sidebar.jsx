@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './Sidebar.css'
 
 // constants
-import { HOME_LINK_TEXT, ADD_BOOKING_LINK_TEXT, CHECK_ROOM_LINK_TEXT } from '../../constants'
+import { HOME_LINK_TEXT, ADD_BOOKING_LINK_TEXT, CHECK_ROOM_LINK_TEXT } from '../../utils/constants'
 
 const Sidebar = () => {
   const isActiveLink = ({ isActive }) => (isActive ? 'active' : '')
