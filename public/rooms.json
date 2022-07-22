@@ -1,32 +1,26 @@
 [
   {
-    "id": 101,
-    "roomName": "Room 101",
-    "bookedBy": []
+    "id": "101",
+    "roomName": "Room 101"
   },
   {
-    "id": 102,
-    "roomName": "Room 102",
-    "bookedBy": []
+    "id": "102",
+    "roomName": "Room 102"
   },
   {
-    "id": 103,
-    "roomName": "Room 103",
-    "bookedBy": []
+    "id": "103",
+    "roomName": "Room 103"
   },
   {
-    "id": 201,
-    "roomName": "Room 201",
-    "bookedBy": []
+    "id": "201",
+    "roomName": "Room 201"
   },
   {
-    "id": 202,
-    "roomName": "Room 202",
-    "bookedBy": []
+    "id": "202",
+    "roomName": "Room 202"
   },
   {
-    "id": 203,
-    "roomName": "Room 203",
-    "bookedBy": []
+    "id": "203",
+    "roomName": "Room 203"
   }
 ]

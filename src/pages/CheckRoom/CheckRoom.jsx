@@ -6,7 +6,7 @@ import CheckRoomForm from '../../components/Forms/CheckRoomForm'
 // constants
 import { CHECK_ROOM_TITLE_TEXT } from '../../utils/constants'
 
-const CheckBooking = () => {
+const CheckRoom = () => {
   return (
     <div className='card-container'>
       <h2>{CHECK_ROOM_TITLE_TEXT}</h2>
@@ -16,4 +16,4 @@ const CheckBooking = () => {
   )
 }
 
-export default CheckBooking
+export default CheckRoom

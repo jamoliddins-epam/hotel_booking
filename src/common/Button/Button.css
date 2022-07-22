@@ -11,8 +11,7 @@
   margin: 1rem 0;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background-color: #41b1e9;
   border-color: #fff;
   color: #fff;
