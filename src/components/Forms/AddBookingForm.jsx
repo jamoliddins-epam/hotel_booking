@@ -9,23 +9,19 @@ import DatePicker from '../../common/DatePicker/DatePicker'
 import Button from '../../common/Button/Button'
 
 // utils & constants
-import { getToday } from '../../utils/utilFunctions'
-import {
-  ADD_BUTTON_TEXT,
-  SURNAME_ERROR_TEXT,
-  ROOM_ERROR_TEXT,
-  DATE_ERROR_TEXT,
-  ADD_BOOKING_SUCCESS_TEXT,
-} from '../../utils/constants'
+import { getToday, validateBookingsData } from '../../utils/utilFunctions'
+import { ADD_BUTTON_TEXT, ADD_BOOKING_SUCCESS_TEXT } from '../../utils/constants'
 
 // redux
 import { selectRooms } from '../../store/rooms/selectors'
+import { selectBookings } from '../../store/bookings/selectors'
 import { addBooking } from '../../store/bookings/actionCreators'
 
 const AddBookingForm = ({ setAlertMsg }) => {
   // states
-  const [bookingData, setBookingData] = useState({ surname: '', room: '', date: '' })
+  const [bookingData, setBookingData] = useState({ surname: '', room: '101', date: '' })
   const rooms = useSelector(selectRooms)
+  const bookings = useSelector(selectBookings)
   const dispatch = useDispatch()
 
   // handlers
@@ -34,38 +30,14 @@ const AddBookingForm = ({ setAlertMsg }) => {
     setBookingData((prevState) => ({ ...prevState, [name]: value }))
   }
 
-  const validateBookingsData = () => {
-    const { surname, room, date } = bookingData
-
-    const isSurnameValid = surname.trim().length > 3
-    if (!isSurnameValid) {
-      setAlertMsg(SURNAME_ERROR_TEXT)
-      return false
-    }
-
-    const isRoomSelected = room.length
-    if (!isRoomSelected) {
-      setAlertMsg(ROOM_ERROR_TEXT)
-      return false
-    }
-
-    const isDateSelected = date.length
-    if (!isDateSelected) {
-      setAlertMsg(DATE_ERROR_TEXT)
-      return false
-    }
-
-    return true
-  }
-
   const handleAddBooking = (e) => {
     e.preventDefault()
-    const isBookingDataValid = validateBookingsData()
+    const isBookingDataValid = validateBookingsData(bookingData, bookings, setAlertMsg)
 
     if (isBookingDataValid) {
       dispatch(addBooking(bookingData))
       setAlertMsg(ADD_BOOKING_SUCCESS_TEXT)
-      setBookingData({ surname: '', room: '', date: '' })
+      setBookingData({ surname: '', room: '101', date: '' })
     }
   }
 
@@ -79,7 +51,7 @@ const AddBookingForm = ({ setAlertMsg }) => {
         onChange={handleInputChange}
       />
       <Select id='room' label='Room' value={bookingData.room} onChange={handleInputChange} options={rooms} />
-      <DatePicker id='date' label='Date' onChange={handleInputChange} min={getToday()} />
+      <DatePicker id='date' label='Date' value={bookingData.date} onChange={handleInputChange} min={getToday()} />
       <Button title={ADD_BUTTON_TEXT} onClick={handleAddBooking} />
     </form>
   )
