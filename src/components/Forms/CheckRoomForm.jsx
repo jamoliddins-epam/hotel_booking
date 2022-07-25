@@ -23,13 +23,12 @@ const CheckRoomForm = ({ setAlertMsg }) => {
   // handlers
   const handleInputChange = (e) => {
     const { name, value } = e.target
+    setRoomData((prevState) => ({ ...prevState, [name]: value }))
 
-    if (name === 'room') {
+    if (isRoomAvailable !== null) {
       setIsRoomAvailable(null)
       setAlertMsg('')
     }
-
-    setRoomData((prevState) => ({ ...prevState, [name]: value }))
   }
 
   const handleCheckRoom = (e) => {
